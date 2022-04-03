@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title StoryKey Demo
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap'
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+    = csrf_meta_tags
+
+  body
+    = yield

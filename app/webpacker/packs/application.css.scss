@@ -1,1 +1,31 @@
-// @import "../stylesheets/main";
+@import "bulma";
+
+h1 {
+  margin-top: 20px;
+}
+.main {
+  width: 650px;
+}
+.data-card {
+  padding: 20px;
+  font-weight: bold;
+}
+.text {
+  color: $white-ter;
+  background-color: $grey-darker;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Courier';
+}
+.color-31 {
+  color: $red;
+}
+.color-33 {
+  color: $yellow;
+}
+.color-35 {
+  color: $turquoise;
+}
+.color-36 {
+  color: $cyan;
+}

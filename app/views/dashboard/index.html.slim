@@ -1,0 +1,39 @@
+= render partial: 'header'
+
+.card.data-card
+  - if @error.present?
+    .notification.is-danger = @error
+  - else
+    h3.title Key:
+    p.text = @split_key.html_safe
+
+    h3.title Story:
+    p.text = @humanized.html_safe
+
+    h3.title Seed Phrase:
+    p.text = @tokenized
+
+.section
+  form
+    .field
+      label.label Key
+      .control
+        input.input type='text' placeholder='Key (leave blank to generate a new one)' name='key' value=''
+
+    .field
+      label.label Bitsize
+      .control
+        input.input type='number' min='1' max=@max_bitsize placeholder='Bitsize' name='bitsize' value=params[:bitsize]
+
+    .field
+      label.label Format
+      .control
+        .select = select_format(params[:format])
+
+    p.has-text-centered
+      button.button.is-info type='submit'
+        span.icon
+          i.fa.fa-arrow-alt-circle-right aria-hidden='true'
+        span Encode
+
+= render 'footer'

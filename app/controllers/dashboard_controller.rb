@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
 
   def index
     @title = params[:key].present? ? 'Key' : 'Random Key'
-    @split_key = key.chars.each_slice(50).map(&:join).join('<br>')
+    @split_key = key.chars.each_slice(70).map(&:join).join('<br>')
     @humanized = webify(story.humanized)
     @tokenized = story.tokenized
   rescue StoryKey::KeyTooLarge

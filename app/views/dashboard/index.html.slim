@@ -8,11 +8,9 @@
     p.text = @split_key.html_safe
 
     h3.title Story:
-    .hint A series of phrases intended for human visualization and longterm memory
     p.text = @humanized.html_safe
 
     h3.title Seed Phrase:
-    .hint Machine-readable string useful for deriving other private keys
     p.text = @tokenized
 
 = render 'form'

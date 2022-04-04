@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
   before_action :assign_defaults
 
   def index
+    @title = params[:key].present? ? 'Key' : 'Random Key'
     @split_key = key.chars.each_slice(50).map(&:join).join('<br>')
     @humanized = webify(story.humanized)
     @tokenized = story.tokenized

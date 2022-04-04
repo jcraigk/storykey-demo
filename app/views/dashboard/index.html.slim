@@ -5,7 +5,6 @@
     .notification.is-danger = @error
   - else
     h3.title #{@title}:
-    .hint A secret such as a cryptocurrency private key (1 - 512 bits)
     p.text = @split_key.html_safe
 
     h3.title Story:
@@ -13,7 +12,7 @@
     p.text = @humanized.html_safe
 
     h3.title Seed Phrase:
-    .hint Useful for deriving other private keys
+    .hint Machine-readable string useful for deriving other private keys
     p.text = @tokenized
 
 = render 'form'

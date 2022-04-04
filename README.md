@@ -1,24 +1,8 @@
-# README
+# StoryKey Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple demonstration of [StoryKey](https://github.com/jcraigk/story_key) written in [Rails](https://rubyonrails.org/). It is not intended for ongoing development.
 
-Things you may want to cover:
 
-* Ruby version
+## License
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

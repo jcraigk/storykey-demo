@@ -1,0 +1,22 @@
+form method='post'
+  .field
+    label.label Key Value
+
+    .control
+      input.input type='text' placeholder='Leave blank for random value' name='key' value=''
+
+  .field
+    label.label Key Bitsize
+    .control
+      input.input type='number' min='1' max=@max_bitsize placeholder='Bitsize' name='bitsize' value=params[:bitsize]
+
+  .field
+    label.label Key Format
+    .control
+      .select = select_format(params[:format])
+
+  p.has-text-centered
+    button.button.is-info type='submit'
+      span.icon
+        i.fa.fa-arrow-alt-circle-right aria-hidden='true'
+      span Create Story

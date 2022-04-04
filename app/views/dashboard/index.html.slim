@@ -5,37 +5,16 @@
     .notification.is-danger = @error
   - else
     h3.title #{@title}:
+    .hint A secret such as a cryptocurrency private key (1 - 512 bits)
     p.text = @split_key.html_safe
 
     h3.title Story:
+    .hint A series of phrases intended for human visualization and longterm memory
     p.text = @humanized.html_safe
 
     h3.title Seed Phrase:
+    .hint Useful for deriving other private keys
     p.text = @tokenized
 
-.section
-  form
-    .field
-      label.label Key Value
-      .control
-        input.input type='text' placeholder='Leave blank for random value' name='key' value=''
-
-    .field
-      label.label Key Bitsize
-      .control
-        input.input type='number' min='1' max=@max_bitsize placeholder='Bitsize' name='bitsize' value=params[:bitsize]
-
-    .field
-      label.label Key Format
-      .control
-        .select = select_format(params[:format])
-
-    p.has-text-centered
-      button.button.is-info type='submit'
-        span.icon
-          i.fa.fa-book-open aria-hidden='true'
-        span Create Story
-
-br
-br
+= render 'form'
 = render 'footer'

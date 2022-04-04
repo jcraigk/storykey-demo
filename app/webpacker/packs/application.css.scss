@@ -7,6 +7,7 @@ h1 {
   width: 750px;
 }
 .data-card {
+  margin-top: 30px;
   padding: 20px;
   font-weight: bold;
 }
@@ -16,6 +17,12 @@ h1 {
   border-radius: 5px;
   padding: 10px;
   font-family: 'Courier';
+}
+.hint {
+  margin-top: -20px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: normal;
 }
 .color-31 {
   color: $red;
@@ -28,4 +35,13 @@ h1 {
 }
 .color-36 {
   color: $cyan;
+}
+form {
+  margin-top: 30px;
+}
+.notification {
+  margin-top: 40px;
+}
+.footer-notice {
+  margin-bottom: 30px;
 }
